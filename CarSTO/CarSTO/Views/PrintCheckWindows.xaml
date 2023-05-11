@@ -1,0 +1,98 @@
+﻿<Window x:Class="CarSTO.Views.PrintCheckWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarSTO.Views"
+        mc:Ignorable="d"
+        Height="450"
+        Width="400"
+        MinHeight="440"
+        MinWidth="290"
+        MaxHeight="460"
+        MaxWidth="410"
+        
+        Title="Печать чека"
+        Icon="/Resources/icon.ico"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Name="statusUser" Margin="10,404,140,10" Text="{Binding CurrentRole}" Height="20" Width="250" TextAlignment="Center"/>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <StackPanel 
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Grid.Column="0">
+                <Image Source="/Resources/logo.png" Height="100" Width="150"/>
+            </StackPanel>
+            
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="10">
+
+                
+                
+                
+
+                <StackPanel>
+                    <TextBlock Margin="1" Height="20" Width="100" Text="Госномер автомобиляр"/>
+                    <TextBox Name="nameBox1"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Gosnomer}"/>
+                </StackPanel>
+
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Марка"/>
+                    <TextBox Name="manufacturerBox1"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Marka}"/>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Заметка"/>
+                    <TextBox Name="nazvanieBox1"
+                             Margin="1"
+                             Height="20"
+                             Text=""/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Стоимость"/>
+                    <TextBox Name="costBox1"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Cost}"/>
+                </StackPanel>
+                
+                <Button Margin="0 10 0 0"
+                        Height="20"
+                        Content="Печать чека"
+                        Command="{Binding PrintCkeck}"
+                        />
+                
+                
+
+
+            </StackPanel>
+
+
+
+
+
+
+
+        </StackPanel>
+    </Grid>
+</Window>

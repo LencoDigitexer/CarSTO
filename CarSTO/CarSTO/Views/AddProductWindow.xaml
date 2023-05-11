@@ -1,0 +1,250 @@
+﻿<Window x:Class="CarSTO.Views.AddProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarSTO.Views"
+        mc:Ignorable="d"
+        Height="450"
+        Width="500"
+        MinHeight="440"
+        MinWidth="290"
+        MaxHeight="460"
+        MaxWidth="510"
+        
+        Title="{Binding Title}"
+        Icon="/Resources/icon.ico"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="10">
+
+                <StackPanel Name="idPanel"
+                            Visibility="{Binding IdPanelVisibility}">
+                    <TextBlock Margin="1"
+                               Height="20"
+                               Width="100"
+                               Text="Id"/>
+                    <TextBox Name="idBox"
+                             Margin="1"
+                             Height="20"
+                             IsReadOnly="True"
+                             Text="{Binding CurrentProduct.Id}"/>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Margin="1" Height="20" Width="100" Text="Госномер"/>
+                    <TextBox Name="nameBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Gosnomer}"/>
+                </StackPanel>
+
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Марка"/>
+                    <TextBox Name="manufacturerBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Marka}"/>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Владелец"/>
+                    <TextBox Name="nazvanieBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Vladelec}"/>
+                </StackPanel>
+
+                
+
+            </StackPanel>
+            
+            
+
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="10">
+
+                <StackPanel Name="idPanel1"
+                            >
+                    <TextBlock Margin="1"
+                               Height="20"
+                               Width="100"
+                               Text="Дата осмотра"/>
+                    <TextBox Name="idBox1"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Osmotr}"/>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Margin="1" Height="20" Width="100" Text="Дата выдачи клиенту"/>
+                    <TextBox Name="nameBox1"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Vidacha}"/>
+                </StackPanel>
+
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Цена ремонта"/>
+                    <TextBox Name="manufacturerBox1"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Cost}"/>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Категория"/>
+                    <TextBox Name="nazvanieBox1"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Category}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Год выпуска"/>
+                    <TextBox Name="nazvanieBox2"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Vipusk}"/>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="VIN"/>
+                    <TextBox Name="nazvanieBox3"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.VIN}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="ПТС"/>
+                    <TextBox Name="nazvanieBox4"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.PTS}"/>
+                </StackPanel>
+
+
+
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="10">
+
+                <StackPanel Name="TethSeeStack"
+                            >
+                    <TextBlock Margin="1"
+                               Height="20"
+                               Width="100"
+                               Text="Тормозные системы"/>
+                    <TextBox Name="brakeBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Tormoz}"/>
+
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock Margin="1" Height="20" Width="100" Text="Рулевое управление"/>
+                    <TextBox Name="rulBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Rul}"/>
+                </StackPanel>
+
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Шины"/>
+                    <TextBox Name="shinaBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Shini}"/>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Диски"/>
+                    <TextBox Name="diskBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Diski}"/>
+                </StackPanel>
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Двигатель"/>
+                    <TextBox Name="engineBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Dvigatel}"/>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock  Margin="1"
+                                Height="20"
+                                Text="Прочие элементы"/>
+                    <TextBox Name="otherBox"
+                             Margin="1"
+                             Height="20"
+                             Text="{Binding CurrentProduct.Prochie}"/>
+                </StackPanel>
+
+
+                <Button Margin="0 10 0 0"
+                        Height="20"
+                        Content="Сохранить"
+                        Command="{Binding SaveProductCommand}"
+                        />
+
+                <Button Margin="0 10 0 0"
+                        Height="20"
+                        Content="Загрузить чек"
+                        Command="{Binding AddCheckCommand}"
+                        />
+
+
+            </StackPanel>
+
+
+        </StackPanel>
+    </Grid>
+</Window>
